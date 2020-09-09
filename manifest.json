@@ -1,0 +1,26 @@
+{
+	"name": "test",
+	"version": "0.0.1",
+	"manifest_version": 2,
+	"default_locale": "en",
+	"description": "简单的Chrome扩展demo",
+	"icons": {
+		"128": "icon/icon.png"
+	},
+	"permissions": [
+		"*://*/*"
+	],
+	"background": {
+		"page": "background.html"
+	},
+	"content_scripts": [{
+		"all_frames": true,
+		"matches": [
+			"*://*/*"
+		],
+		"js": [
+			"content_script.js"
+		]
+	}],
+	"minimum_chrome_version": "46.0"
+}
